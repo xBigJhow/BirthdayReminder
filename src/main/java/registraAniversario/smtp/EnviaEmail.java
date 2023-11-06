@@ -10,10 +10,16 @@ import registraAniversario.model.Pessoa;
 public class EnviaEmail {
 
     public void enviarEmail() {
-        final String username = "jonatassendmail@gmail.com";
-        final String password = "vpgp kbhp coqf nztc";
+        //put your e-mail that will be connected with smtp
+        final String username = "your@email.com";
+        // and your password.
+        // if u want, create a new e-mails just for send birthday's mail.
+        final String password = "yourPassword";
 
+        
         Properties props = new Properties();
+
+        // the properties, u will put your server smtp, below will be connected by a gmail smtp
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
         props.put("mail.smtp.auth", "true");
@@ -40,7 +46,8 @@ public class EnviaEmail {
             if (!mensagem.toString().isEmpty()) {
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(username));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("jonatasfreitas14@hotmail.com"));
+                //put below your recipient, like your Personal Email that u will receive the reminder.
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("your@recipient"));
                 message.setSubject("ANIVERSARIANTE(S) DO DIA");
                 message.setText(mensagem.toString());
 
