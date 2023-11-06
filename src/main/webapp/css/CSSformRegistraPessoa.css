@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Mantém a fonte original */
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    margin-top: 10px; /* Adicione margem superior para separar o h1 */
+    color: #333;
+}
+
+/* Estilo para as labels dos campos do formulário */
+label {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adicione margem inferior para separar o label do campo */
+}
+
+/* Estilo para o formulário com sombra mais forte */
+form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Aumente a intensidade da sombra */
+    text-align: left;
+}
+
+/* Estilo para os campos de entrada de texto */
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilo para o botão "Registrar" */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o link "Lista de Pessoas Registradas" */
+a.list-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+a.list-link:hover {
+    background-color: #0056b3;
+}
