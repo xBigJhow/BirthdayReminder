@@ -29,7 +29,7 @@ Pré-requisitos
 - Importe o projeto para a sua IDE Java (Eclipse, IntelliJ, etc.) como um Dynamic Web Project.
 - Implante o aplicativo no servidor de aplicação Java.
 - Certifique-se de que o agendador esteja configurado corretamente para rodar todos os dias às 6 da manhã.
-- Inicie o servidor de aplicação.
+- Inicie o servidor de aplicação (Faça o Deploy em núvem).
 - Acesse o aplicativo via navegador web.
 
 # ✈️ Uso ✈️
