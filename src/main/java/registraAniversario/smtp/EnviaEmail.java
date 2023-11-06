@@ -10,8 +10,8 @@ import registraAniversario.model.Pessoa;
 public class EnviaEmail {
 
     public void enviarEmail() {
-        final String username = "jonatassendmail@gmail.com";
-        final String password = "vpgp kbhp coqf nztc";
+        final String username = "your@email.com";
+        final String password = "yourPassword";
 
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -40,7 +40,7 @@ public class EnviaEmail {
             if (!mensagem.toString().isEmpty()) {
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(username));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("jonatasfreitas14@hotmail.com"));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("mail@recipient"));
                 message.setSubject("ANIVERSARIANTE(S) DO DIA");
                 message.setText(mensagem.toString());
 
