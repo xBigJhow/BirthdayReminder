@@ -16,11 +16,11 @@ import registraAniversario.model.Pessoa;
 public class PessoaDAO {
 
 	//put your link connection DB and name of your Schema like jdbc:mysql://localhost:3306/personDB
-	String url = "jdbc:mysql://localhost:3306/cadastro_pessoa";
+	String url = "yourConnection/nameofSchema";
 	//put your user from SQL
-	String user = "root";
+	String user = "yourUserDB";
 	//put your password from SQL
-	String password = "123456";
+	String password = "yourPasswordDB";
 	
 	private static final String INSERT_USER_SQL = "INSERT INTO aniversariantes (nome, data_nascimento, obs) VALUES (?,?,?);";
 	private static final String SELECT_USER_BY_ID = "SELECT * FROM aniversariantes WHERE id = ?;";
