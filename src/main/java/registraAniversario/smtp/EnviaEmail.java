@@ -1,5 +1,6 @@
 package registraAniversario.smtp;
 
+import java.util.List;
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -40,13 +41,14 @@ public class EnviaEmail {
             // Obtém a lista de aniversariantes do dia
             PessoaDAO pessoaDAO = new PessoaDAO();
             StringBuilder mensagem = new StringBuilder("ANIVERSARIANTES DO DIA:\n\n");
-            for (Pessoa pessoa : pessoaDAO.obterAniversariantesDoDia()) {
+            List<Pessoa> pessoas = pessoaDAO.obterAniversariantesDoDia();
+            for (Pessoa pessoa : pessoas) {
                 mensagem.append("Nome: ").append(pessoa.getNome()).append("\n");
-                mensagem.append("Data de Nascimento: ").append(pessoa.getDataNascimento()).append("\n\n");
+                mensagem.append("Data de Nascimento: ").append(pessoa.getDataNascimento()).append("\n");
                 mensagem.append("Observação: ").append(pessoa.getObs()).append("\n\n");
             }
 
-            if (!mensagem.toString().isEmpty()) {
+			if (!(pessoas.isEmpty())) {
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(username));
                 //put below your recipient, like your Personal Email that u will receive the reminder.
