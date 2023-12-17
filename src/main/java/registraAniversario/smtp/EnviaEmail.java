@@ -12,10 +12,10 @@ public class EnviaEmail {
 
     public void enviarEmail() {
         //put your e-mail that will be connected with smtp
-    	final String username = "jonatassendmail@gmail.com";
+    	final String username = "your e-mail";
         // and your password.
         // if u want, create a new e-mails just for send birthday's mail.
-    	final String password = "vpgp kbhp coqf nztc";
+    	final String password = "your password";
         
         
         
@@ -52,7 +52,7 @@ public class EnviaEmail {
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(username));
                 //put below your recipient, like your Personal Email that u will receive the reminder.
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("jonatasfreitas14@hotmail.com"));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("your e-mail"));
                 message.setSubject("ANIVERSARIANTE(S) DO DIA");
                 message.setText(mensagem.toString());
 
